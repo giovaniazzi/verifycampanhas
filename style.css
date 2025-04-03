@@ -3,7 +3,7 @@ body {
   font-family: Arial, sans-serif;
   margin: 0;
   padding: 0;
-  background: url('https://www.uhdpaper.com/2025/02/1435d-sung-jinwoo-vs-beru-solo-leveling.html?m=0') no-repeat center center fixed;
+  background: #1e1e1e url('https://www.uhdpaper.com/2025/02/1435d-sung-jinwoo-vs-beru-solo-leveling.html?m=0') no-repeat center center fixed;
   background-size: cover;
   color: white;
 }
@@ -17,12 +17,17 @@ header h1 {
   font-size: 2rem;
 }
 
+nav {
+  margin-top: 10px;
+}
+
 nav button {
   margin: 5px;
   padding: 10px;
   background-color: #444;
   color: white;
   border: none;
+  border-radius: 5px;
   cursor: pointer;
 }
 
@@ -48,7 +53,11 @@ textarea {
   height: 100px;
 }
 
+button {
+  display: block;
+  margin: auto;
+}
+
 #timer {
   font-size: 2rem;
-  text-align: center;
 }
