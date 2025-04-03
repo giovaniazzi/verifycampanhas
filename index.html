@@ -9,11 +9,6 @@
 <body>
     <div class="navbar">
         <h1>📋 Campanhas Diárias</h1>
-        <div class="submenu">
-            <button onclick="showSection('campaigns')">Campanhas</button>
-            <button onclick="showSection('notes')">Anotações</button>
-            <button onclick="showSection('timer')">Cronômetro</button>
-        </div>
     </div>
 
     <!-- Campanhas -->
@@ -23,21 +18,6 @@
             <!-- Lista de campanhas com checkbox -->
         </ul>
         <button onclick="clearChecks()">❌ Limpar Tudo</button>
-    </div>
-
-    <!-- Anotações -->
-    <div id="notes" class="section hidden">
-        <h2>📝 Anotações</h2>
-        <textarea id="notesArea" placeholder="Digite suas anotações..."></textarea>
-        <button onclick="saveNotes()">💾 Salvar</button>
-    </div>
-
-    <!-- Cronômetro -->
-    <div id="timer" class="section hidden">
-        <h2>⏱️ Cronômetro de 10 Minutos</h2>
-        <div id="countdown">10:00</div>
-        <button onclick="startTimer()">▶️ Iniciar</button>
-        <button onclick="resetTimer()">🔄 Reiniciar</button>
     </div>
 
     <script src="script.js"></script>
