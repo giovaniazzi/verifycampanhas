@@ -1,43 +1,77 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Campanhas Diárias</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Campanhas Diárias</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-  <header>
-    <h1>📋 Campanhas Diárias</h1>
-    <nav>
-      <button onclick="resetChecklist()">Limpar Checklist</button>
-      <button onclick="resetTimer()">Reiniciar Cronômetro</button>
-    </nav>
-  </header>
+    <div class="navbar">
+        <h1>📋 Campanhas Diárias</h1>
+        <div class="submenu">
+            <button onclick="showSection('campaigns')">Campanhas</button>
+            <button onclick="showSection('notes')">Anotações</button>
+            <button onclick="showSection('timer')">Cronômetro</button>
+        </div>
+    </div>
 
-  <main>
-    <!-- Lista de Campanhas -->
-    <section id="campanhas">
-      <h2>Lista de Campanhas</h2>
-      <ul id="checklist"></ul>
-    </section>
+    <!-- Campanhas -->
+    <div id="campaigns" class="section">
+        <h2>✅ Campanhas</h2>
+        <ul id="campaignList">
+            <!-- Lista de campanhas -->
+            <li>Itajai 2 Dr José Bonifácio</li>
+            <li>Passos MG</li>
+            <li>Duque de Caxias RJ</li>
+            <li>Montes Claros MG</li>
+            <li>São Caetano do Sul</li>
+            <li>Maringá</li>
+            <li>Sorriso - ESTÁ RODANDO CLÍNICO JUNTO</li>
+            <li>Muriaé</li>
+            <li>Votuporanga</li>
+            <li>Sinop - RODANDO CLÍNICO JUNTO</li>
+            <li>Barreiras BA - IMPLANTE JUNTO</li>
+            <li>Ourinhos</li>
+            <li>Itajai 1</li>
+            <li>ITU</li>
+            <li>Dois Vizinhos</li>
+            <li>Hortolândia</li>
+            <li>Campo Bom RS</li>
+            <li>Itaúna - sem gratis</li>
+            <li>Itapira SP - IMP E ORTO - sem gratis</li>
+            <li>Santa ROSA - sem gratis</li>
+            <li>Bagé RS</li>
+            <li>Chapecó - Orthodontic</li>
+            <li>Jaru</li>
+            <li>Jaraguá do Sul</li>
+            <li>ODC IBATÉ</li>
+            <li>Alegra Odonto Colatina</li>
+            <li>Coife Quixeramobim CE</li>
+            <li>COIFE BACABAL</li>
+            <li>ARTE DE SORRIR GOIANIA</li>
+            <li>IMPERATRIZ MA</li>
+            <li>ORAL SIN IBATÉ IMPLANTE</li>
+            <li>PRUDENTÓPOLIS</li>
+            <li>DUO PIEDADE</li>
+        </ul>
+    </div>
 
-    <!-- Área de Anotações -->
-    <section id="anotacoes">
-      <h2>Anotações</h2>
-      <textarea id="anotacoesTexto" placeholder="Escreva suas anotações aqui..."></textarea>
-      <button onclick="salvarAnotacoes()">Salvar Anotações</button>
-    </section>
+    <!-- Anotações -->
+    <div id="notes" class="section hidden">
+        <h2>📝 Anotações</h2>
+        <textarea id="notesArea" placeholder="Digite suas anotações..."></textarea>
+        <button onclick="saveNotes()">💾 Salvar</button>
+    </div>
 
     <!-- Cronômetro -->
-    <section id="cronometro">
-      <h2>Cronômetro</h2>
-      <div id="timer">10:00</div>
-      <button onclick="startTimer()">Iniciar Cronômetro</button>
-    </section>
-  </main>
+    <div id="timer" class="section hidden">
+        <h2>⏱️ Cronômetro de 10 Minutos</h2>
+        <div id="countdown">10:00</div>
+        <button onclick="startTimer()">▶️ Iniciar</button>
+        <button onclick="resetTimer()">🔄 Reiniciar</button>
+    </div>
 
-  <!-- Script -->
-  <script src="script.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
