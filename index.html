@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Campanhas Diárias</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <header>
+    <h1>📋 Campanhas Diárias</h1>
+    <nav>
+      <button onclick="resetChecklist()">Limpar Checklist</button>
+      <button onclick="resetTimer()">Reiniciar Cronômetro</button>
+    </nav>
+  </header>
+
+  <main>
+    <!-- Lista de Campanhas -->
+    <section id="campanhas">
+      <h2>Lista de Campanhas</h2>
+      <ul id="checklist"></ul>
+    </section>
+
+    <!-- Área de Anotações -->
+    <section id="anotacoes">
+      <h2>Anotações</h2>
+      <textarea id="anotacoesTexto" placeholder="Escreva suas anotações aqui..."></textarea>
+      <button onclick="salvarAnotacoes()">Salvar Anotações</button>
+    </section>
+
+    <!-- Cronômetro -->
+    <section id="cronometro">
+      <h2>Cronômetro</h2>
+      <div id="timer">10:00</div>
+      <button onclick="startTimer()">Iniciar Cronômetro</button>
+    </section>
+  </main>
+
+  <!-- Script -->
+  <script src="script.js"></script>
+</body>
+</html>
